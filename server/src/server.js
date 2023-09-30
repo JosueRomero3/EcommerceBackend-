@@ -18,11 +18,12 @@ connectDB();
 const app = express();
 
 //middelwares
-app.use(cors({
-    origin:["http://localhost:3000", "https://ecommerce-la-tiendita.netlify.app"]
-}))
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: false }));
+app.use(cors({
+    origin: ["http://localhost:8080", "https://ecommerce-app.onrender.com"],
+}));
 
 //routes
 app.use("/api/v1/auth", authRoutes);
