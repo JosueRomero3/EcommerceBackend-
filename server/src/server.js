@@ -20,9 +20,7 @@ const app = express();
 //middelwares
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(cors({
-    origin: ["http://localhost:8080", "https://ecommerce-app-jh01.onrender.com"],
-}));
+app.use(cors());
 
 //routes
 app.use("/api/v1/auth", authRoutes);
