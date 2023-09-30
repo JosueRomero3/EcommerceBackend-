@@ -19,7 +19,7 @@ const app = express();
 
 //middelwares
 app.use(cors({
-    origin:["http://localhost:8080", "https://ecommerce-la-tiendita.netlify.app"]
+    origin:["http://localhost:3000", "https://ecommerce-la-tiendita.netlify.app"]
 }))
 app.use(express.json());
 app.use(morgan("dev"));
